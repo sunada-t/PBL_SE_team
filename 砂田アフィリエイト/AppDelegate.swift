@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  砂田アフィリエイト
+//  森田アフィリエイト
 //
 //  Created by hiromu-m on 2020/01/14.
 //  Copyright © 2020 hiromu-m. All rights reserved.
