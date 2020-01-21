@@ -13,19 +13,10 @@ import Kanna
 
 class NaistWebViewController: UIViewController,WKNavigationDelegate{
 
-    
+    var nowhtml:String!
     @IBOutlet weak var webview: WKWebView!
     
-    let params: Parameters = [
-        "Username": "ryulstory",
-        "Password": "1234!"
-    ]
-
-    let loginRequest = [
-            "data[User][account]": "aaaaaaa",
-            "data[User][password]": "UserPassword"
-        ]
-    let headers = ["Content-Type" : "text/html"]
+   
     
     override func viewDidLoad() {
         
@@ -37,15 +28,8 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
           print("-----------")
           print(self.webview.url!)
           print("-----------")
+        
             
-            Alamofire.request(url, method : .post, parameters : loginRequest, encoding :
-            JSONEncoding.default , headers : headers).responseData { dataResponse in
-
-            print("[[[[[[[[[[[[[[[[[[[[")
-             print(dataResponse.request as Any) // your request
-             //print(dataResponser.response as Any) // your response
-                print("]]]]]]]]]]]]]]]")
-             }
             
           }
         
@@ -55,6 +39,63 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
     }
     
     
+    
+    @IBAction func htmlget(_ sender: Any) {
+        webview.evaluateJavaScript("document.documentElement.outerHTML.toString()",
+                                   completionHandler: { (html: Any?, error: Error?) in
+                                    print(type(of:html))
+                                    self.nowhtml = html as? String
+                                    if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
+                   var sizes = [String]()
+                    for link in doc.xpath("//td[@class='bgGray01']") {
+                        sizes.append(link.text ?? "")
+                    }
+                   print(sizes)
+        }
+        }
+                                    )
+        
+       
+            
+        }
+        
+    
+
+            // if let doc = try? HTML(html: html, encoding: .utf8) {
+             // 牛丼のサイズをXpathで指定
+           //  var sizes = [String]()
+            // for link in doc.xpath("//th[@class='menu-size']") {
+            //     sizes.append(link.text ?? "")
+             //}
+                //                    }
+               
+      //  })
+      /*
+            if let doc = try? HTML(html: html, encoding: .utf8) {
+                // 牛丼のサイズをXpathで指定
+                var sizes = [String]()
+                for link in doc.xpath("//th[@class='menu-size']") {
+                    sizes.append(link.text ?? "")
+                }
+                
+                //牛丼の値段をXpathで指定
+                var prices = [String]()
+                for link in doc.xpath("//td[@class='menu-price']") {
+                    prices.append(link.text ?? "")
+                }
+
+                //牛丼のサイズ分だけループ
+                for (index, value) in sizes.enumerated() {
+                    let gyudon = Gyudon()
+                    gyudon.size = value
+                    gyudon.price = prices[index]
+                }
+                //print("======================")
+                //print(self.beefbowl)
+                
+               
+            
+        }*/
     
     
 
