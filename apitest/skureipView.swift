@@ -37,6 +37,7 @@ class skureipView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     //スクレイピング対象のサイトを指定
     Alamofire.request("https://www.yoshinoya.com/menu/gyudon/gyu-don/").responseString { response in
             if let html = response.result.value {
+              //  print()
                 if let doc = try? HTML(html: html, encoding: .utf8) {
 
                     // 牛丼のサイズをXpathで指定
