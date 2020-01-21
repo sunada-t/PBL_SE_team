@@ -43,7 +43,7 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
 
             print("[[[[[[[[[[[[[[[[[[[[")
              print(dataResponse.request as Any) // your request
-             print(dataResponser.response as Any) // your response
+             //print(dataResponser.response as Any) // your response
                 print("]]]]]]]]]]]]]]]")
              }
             
