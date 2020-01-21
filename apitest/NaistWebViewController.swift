@@ -8,15 +8,16 @@
 
 import UIKit
 import WebKit
-import Alamofire
 import Kanna
 
 class NaistWebViewController: UIViewController,WKNavigationDelegate{
 
+    @IBOutlet weak var rexultCal2: UITextView!
     var nowhtml:String!
     @IBOutlet weak var webview: WKWebView!
     
-   
+    @IBOutlet weak var resultCal: UITextView!
+    
     
     override func viewDidLoad() {
         
@@ -75,12 +76,10 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
                   i = i+4
                                         }
         print("単位取得情報ダオ")
-        print("一般 ---->> \(ippan1)/4")
-       print("序論 ---->> \(joron2)/3")
-        print("基礎と専門 ->> \(kiso3+senmon4)/12")
-         print("pbl ----->> \(pbl)/2")
-        print("残り卒論がんば！！！")
         print(self.webview.url!)
+        self.resultCal.text = "一般 ---->> \(ippan1)/4\n序論 ---->> \(joron2)/3 "
+        self.rexultCal2.text = " 基礎と専門 ->> \(kiso3+senmon4)/12\n pbl ----->> \(pbl)/2"
+                                        
         }
         }
                                     )

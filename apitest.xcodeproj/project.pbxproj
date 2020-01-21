@@ -35,7 +35,6 @@
 /* Begin PBXFileReference section */
 		0A9557E123AE191400C3A245 /* skureipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skureipView.swift; sourceTree = "<group>"; };
 		0A9557E323AE1AC300C3A245 /* dog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog2.png; sourceTree = "<group>"; };
-		0A9C100923AD16EB0095E3B2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9C100D23AD16F10095E3B2 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9C101823AD1C210095E3B2 /* Gyudon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gyudon.swift; sourceTree = "<group>"; };
 		0AA4654E23A90BF4004A3A79 /* apitest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apitest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				0A9C100D23AD16F10095E3B2 /* Kanna.framework */,
-				0A9C100923AD16EB0095E3B2 /* Alamofire.framework */,
 				0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */,
 				A38F3211684D56FC23700724 /* Pods_apitestTests.framework */,
 			);
