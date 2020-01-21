@@ -78,8 +78,9 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
         print("一般 ---->> \(ippan1)/4")
        print("序論 ---->> \(joron2)/3")
         print("基礎と専門 ->> \(kiso3+senmon4)/12")
-         print("pbl ----->> \(pbl)/12")
-                                
+         print("pbl ----->> \(pbl)/2")
+        print("残り卒論がんば！！！")
+        print(self.webview.url!)
         }
         }
                                     )
