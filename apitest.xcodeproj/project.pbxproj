@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09804D3BF594ACC23DB6CD58 /* Pods_apitest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */; };
+		0A90DB3823D84467001E13BA /* BusTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90DB3723D84467001E13BA /* BusTimeViewController.swift */; };
 		0A9557E223AE191400C3A245 /* skureipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9557E123AE191400C3A245 /* skureipView.swift */; };
 		0A9557E423AE1AC300C3A245 /* dog2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9557E323AE1AC300C3A245 /* dog2.png */; };
 		0A9C101923AD1C210095E3B2 /* Gyudon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C101823AD1C210095E3B2 /* Gyudon.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A90DB3723D84467001E13BA /* BusTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeViewController.swift; sourceTree = "<group>"; };
 		0A9557E123AE191400C3A245 /* skureipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skureipView.swift; sourceTree = "<group>"; };
 		0A9557E323AE1AC300C3A245 /* dog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog2.png; sourceTree = "<group>"; };
 		0A9C100D23AD16F10095E3B2 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				0A9557E323AE1AC300C3A245 /* dog2.png */,
 				0A9557E123AE191400C3A245 /* skureipView.swift */,
 				0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */,
+				0A90DB3723D84467001E13BA /* BusTimeViewController.swift */,
 			);
 			path = apitest;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A90DB3823D84467001E13BA /* BusTimeViewController.swift in Sources */,
 				0A9557E223AE191400C3A245 /* skureipView.swift in Sources */,
 				0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */,
 				0A9C101923AD1C210095E3B2 /* Gyudon.swift in Sources */,

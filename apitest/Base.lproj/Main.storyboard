@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Skureip View-->
+        <!--１週間の日程-->
         <scene sceneID="slc-H2-An8">
             <objects>
                 <viewController id="CrL-Fv-IO9" customClass="skureipView" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,11 +17,57 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jmG-oc-7SC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="J7G-D0-d5Q"/>
+                    <navigationItem key="navigationItem" title="１週間の日程" id="J7G-D0-d5Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENY-Bp-lB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1014" y="127"/>
+        </scene>
+        <!--バス時刻-->
+        <scene sceneID="754-2Z-uoZ">
+            <objects>
+                <viewController id="csz-Yk-ilK" customClass="BusTimeViewController" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iwk-Dp-Efm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIk-To-enf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="I14-tE-Rjp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="バス時刻" id="rBg-V4-iaf"/>
+                    <connections>
+                        <outlet property="webview" destination="jIk-To-enf" id="rk9-gH-N8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ph-ma-lcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733.33333333333337" y="-664.28571428571422"/>
+        </scene>
+        <!--電車時刻-->
+        <scene sceneID="c7s-n7-d7H">
+            <objects>
+                <viewController id="trn-IW-kAp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wzh-P3-esd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xRQ-UW-57l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="電車時刻" id="LIq-Xr-fVy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDy-Ji-YMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="-664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fMg-sM-9Pr">
@@ -31,47 +77,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccg-ny-0B3">
-                                <rect key="frame" x="131" y="223" width="152" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccg-ny-0B3">
+                                <rect key="frame" x="130" y="223" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="残り単位">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.062565244734287262" green="0.18780350685119629" blue="0.21843904256820679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="nYE-cX-qvU" kind="show" id="3n8-Hx-3RM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1du-qB-rWP">
-                                <rect key="frame" x="131" y="312" width="152" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1du-qB-rWP">
+                                <rect key="frame" x="130" y="312" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="１週間の日程"/>
+                                <connections>
+                                    <segue destination="CrL-Fv-IO9" kind="show" id="hBZ-bw-wAv"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-FV-ZHZ">
-                                <rect key="frame" x="131" y="399" width="152" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-FV-ZHZ">
+                                <rect key="frame" x="130" y="399" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
                                 <state key="normal" title="バス時刻"/>
+                                <connections>
+                                    <segue destination="csz-Yk-ilK" kind="show" id="ozO-ZG-Qk2"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8f-rs-rwo">
-                                <rect key="frame" x="131" y="486" width="152" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8f-rs-rwo">
+                                <rect key="frame" x="130" y="486" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="電車時刻"/>
+                                <connections>
+                                    <segue destination="trn-IW-kAp" kind="show" id="LTb-rW-6DN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08Q-Z6-XVT">
-                                <rect key="frame" x="131" y="579" width="152" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08Q-Z6-XVT">
+                                <rect key="frame" x="130" y="579" width="153" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9256015419960022" green="0.86295229196548462" blue="0.64245986938476562" alpha="0.98909605060000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="試験"/>
                                 <connections>
-                                    <segue destination="CrL-Fv-IO9" kind="show" id="me6-xe-DMF"/>
+                                    <segue destination="Z4f-ST-vvT" kind="show" id="5u4-AR-BVa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,7 +139,23 @@
             </objects>
             <point key="canvasLocation" x="-207.24637681159422" y="126.5625"/>
         </scene>
-        <!--Naist Web View Controller-->
+        <!--テスト-->
+        <scene sceneID="tfH-9t-Y4u">
+            <objects>
+                <viewController id="Z4f-ST-vvT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gfL-DM-uxm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wuc-F6-19G"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="テスト" id="3ks-BC-e5P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w40-DR-xKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1218" y="858"/>
+        </scene>
+        <!--単位状況計算-->
         <scene sceneID="QjL-xX-xF5">
             <objects>
                 <viewController id="nYE-cX-qvU" customClass="NaistWebViewController" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +190,7 @@
                         <color key="backgroundColor" red="0.062565244734287262" green="0.18780350685119629" blue="0.21843904256820679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bA3-a5-rDk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MFT-Y8-Sze">
+                    <navigationItem key="navigationItem" title="単位状況計算" id="MFT-Y8-Sze">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cq9-f8-Lf2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EgF-ax-Uec">
                                 <rect key="frame" x="340" y="6.5" width="54" height="31"/>
@@ -150,6 +221,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcK-An-XYX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.062565244734287262" green="0.18780350685119629" blue="0.21843904256820679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="u0Q-Mz-MBR" kind="relationship" relationship="rootViewController" id="Se3-aO-l1j"/>

@@ -52,12 +52,11 @@ class NaistWebViewController: UIViewController,WKNavigationDelegate{
                         sizes.append(link.text ?? "")
                     }
                      var i = 0
-                                        var cid : [String?]
-                                        var ippan1 = 0
-                                        var joron2 = 0
-                                        var kiso3 = 0
-                                        var senmon4 = 0
-                                        var pbl = 0
+                    var ippan1 = 0
+                    var joron2 = 0
+                    var kiso3 = 0
+                    var senmon4 = 0
+                    var pbl = 0
             while( i<sizes.count){
 
                 let k = sizes[i].suffix(5)
