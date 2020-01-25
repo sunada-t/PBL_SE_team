@@ -20,6 +20,7 @@ class zikanwari: UIViewController,WKNavigationDelegate {
         if let url = URL(string: "https://subjregist.naist.jp"){
         self.webviewmkit.load(URLRequest(url: url))
           // Do any additional setup after loading the view.
+            
           print("-----------")
           print(self.webviewmkit.url!)
           print("-----------")
