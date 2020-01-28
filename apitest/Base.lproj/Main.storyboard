@@ -142,18 +142,47 @@
         <!--テスト-->
         <scene sceneID="tfH-9t-Y4u">
             <objects>
-                <viewController id="Z4f-ST-vvT" sceneMemberID="viewController">
+                <viewController id="Z4f-ST-vvT" customClass="testViewController" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfL-DM-uxm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WRI-C3-EAz">
+                                <rect key="frame" x="0.0" y="88" width="394" height="318"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xFo-as-65T">
+                                <rect key="frame" x="77" y="414" width="240" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wuc-F6-19G"/>
                     </view>
-                    <navigationItem key="navigationItem" title="テスト" id="3ks-BC-e5P"/>
+                    <navigationItem key="navigationItem" title="テスト" id="3ks-BC-e5P">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="AHH-us-tmy">
+                            <connections>
+                                <action selector="htmlget:" destination="Z4f-ST-vvT" id="jsh-pg-OGE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rexultCal2" destination="WRI-C3-EAz" id="Fyz-Ld-wHK"/>
+                        <outlet property="webview" destination="xFo-as-65T" id="x7o-Kw-U2o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w40-DR-xKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1218" y="858"/>
+            <point key="canvasLocation" x="-1218.840579710145" y="857.8125"/>
         </scene>
         <!--単位状況計算-->
         <scene sceneID="QjL-xX-xF5">
