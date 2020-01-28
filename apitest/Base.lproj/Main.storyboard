@@ -10,18 +10,47 @@
         <!--１週間の日程-->
         <scene sceneID="slc-H2-An8">
             <objects>
-                <viewController id="CrL-Fv-IO9" customClass="skureipView" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CrL-Fv-IO9" customClass="zikanwari1" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M3w-9S-ZIh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jmG-oc-7SC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="１週間の日程" id="J7G-D0-d5Q"/>
+                    <navigationItem key="navigationItem" title="１週間の日程" id="J7G-D0-d5Q">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="29Y-1g-cim">
+                            <connections>
+                                <action selector="gamen2:" destination="CrL-Fv-IO9" id="de6-aY-00o"/>
+                                <segue destination="ci2-Px-XIp" kind="show" id="dF9-YU-CLq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENY-Bp-lB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1014" y="127"/>
+        </scene>
+        <!--Zikanwari-->
+        <scene sceneID="Dwe-RK-xN4">
+            <objects>
+                <viewController id="ci2-Px-XIp" customClass="zikanwari" customModule="apitest" customModuleProvider="target" sceneMemberID="viewController">
+                    <wkWebView key="view" contentMode="scaleToFill" id="VOh-dO-jlf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                    <navigationItem key="navigationItem" id="3cx-T7-Hv1"/>
+                    <connections>
+                        <outlet property="webviewmkit" destination="VOh-dO-jlf" id="PT1-im-ka6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evc-h9-afa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.68115942029" y="119.86607142857142"/>
         </scene>
         <!--バス時刻-->
         <scene sceneID="754-2Z-uoZ">
