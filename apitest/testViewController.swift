@@ -13,6 +13,16 @@ import Kanna
 class testViewController: UIViewController,WKNavigationDelegate{
 
     @IBOutlet weak var rexultCal2: UITextView!
+    
+    @IBOutlet weak var tuesday: UITextView!
+    
+    @IBOutlet weak var wednesday: UITextView!
+    
+    @IBOutlet weak var thursday: UITextView!
+    
+    
+    @IBOutlet weak var friday: UITextView!
+    
     var nowhtml:String!
     @IBOutlet weak var webview: WKWebView!
     
@@ -48,19 +58,37 @@ class testViewController: UIViewController,WKNavigationDelegate{
                         
                     }
                  var i = 0
+                var dayt = 0
                  while( i<sizes.count){
                     print(sizes[i])
-                    
+                    if(dayt != 6){
                     if let days = Int(sizes[i].replacingOccurrences(of: "\t", with: "")){
-                        self.rexultCal2.text = self.rexultCal2.text +  "\n=======\(days)日目========\n"
+                        if(dayt == 0 && sizes[i+1] == "月"){
+                        dayt = dayt+1
+                        }else if(dayt != 0){
+                         dayt = dayt+1
+                        }
                     }
                     else{
-                  self.rexultCal2.text = self.rexultCal2.text + sizes[i].replacingOccurrences(of: "\t", with: "")
+                        if(dayt == 1){
+                        self.rexultCal2.text = self.rexultCal2.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                            }else if(dayt == 2){
+                                self.tuesday.text = self.tuesday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                            }else if(dayt == 3){
+                                self.wednesday.text = self.wednesday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                            }else if(dayt == 4){
+                                self.thursday.text = self.thursday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                            }else if(dayt == 5){
+                                self.friday.text = self.friday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                            }
+            
                     }
                     // self.rexultCal2.text = sizes[i].trimmingCharacters(in: .whitespacesAndNewlines)
                     i=i+1
                    
-                         
+                    }else{
+                        break
+                    }
                                         }
 }
         
