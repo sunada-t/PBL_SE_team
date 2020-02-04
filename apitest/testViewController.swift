@@ -29,13 +29,8 @@ class testViewController: UIViewController,WKNavigationDelegate{
           print("-----------")
           print(self.webview.url!)
           print("-----------")
-        
-            
-            
+
           }
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     
@@ -44,20 +39,25 @@ class testViewController: UIViewController,WKNavigationDelegate{
     @IBAction func htmlget(_ sender: Any) {
         webview.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                    completionHandler: { (html: Any?, error: Error?) in
-                                    print(type(of:html))
                                     self.nowhtml = html as? String
                                     if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
                    var sizes = [String]()
-                                        self.rexultCal2.text = html as?String
+                                       
                     for link in doc.xpath("//td[@class='']") {
-                        sizes.append(link.text ?? "")
-                        print(link.text!)
-                        self.rexultCal2.text = "====>\(sizes)"
+                        sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
+                        
                     }
-                                        var i = 0
+                 var i = 0
                  while( i<sizes.count){
                     print(sizes[i])
-                    // self.rexultCal2.text = sizes[i]
+                    
+                    if let days = Int(sizes[i].replacingOccurrences(of: "\t", with: "")){
+                        self.rexultCal2.text = self.rexultCal2.text +  "\n=======\(days)日目========\n"
+                    }
+                    else{
+                  self.rexultCal2.text = self.rexultCal2.text + sizes[i].replacingOccurrences(of: "\t", with: "")
+                    }
+                    // self.rexultCal2.text = sizes[i].trimmingCharacters(in: .whitespacesAndNewlines)
                     i=i+1
                    
                          
