@@ -23,7 +23,6 @@
 		0AA4656923A90BF9004A3A79 /* apitestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4656823A90BF9004A3A79 /* apitestTests.swift */; };
 		0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */; };
 		4F8BDDF223DAFCEB00602FBF /* zikanwari1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */; };
-		4FABCA4F23DADE6300B3477A /* zikanwari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FABCA4E23DADE6300B3477A /* zikanwari.swift */; };
 		61C481948CE37328688226EE /* Pods_apitestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38F3211684D56FC23700724 /* Pods_apitestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A76921C23E91EC000CD4DB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A90DB3723D84467001E13BA /* BusTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeViewController.swift; sourceTree = "<group>"; };
 		0A90DB3923E00028001E13BA /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		0A90DB3B23E012A8001E13BA /* Tsubasa_Sunada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tsubasa_Sunada.jpg; sourceTree = "<group>"; };
@@ -59,7 +59,6 @@
 		0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaistWebViewController.swift; sourceTree = "<group>"; };
 		0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari1.swift; sourceTree = "<group>"; };
-		4FABCA4E23DADE6300B3477A /* zikanwari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari.swift; sourceTree = "<group>"; };
 		A38F3211684D56FC23700724 /* Pods_apitestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC90387349B020AF774769A9 /* Pods-apitest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apitest.release.xcconfig"; path = "Target Support Files/Pods-apitest/Pods-apitest.release.xcconfig"; sourceTree = "<group>"; };
 		DD16ADCB65213D3792CDF226 /* Pods-apitestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apitestTests.debug.xcconfig"; path = "Target Support Files/Pods-apitestTests/Pods-apitestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		0AA4654523A90BF4004A3A79 = {
 			isa = PBXGroup;
 			children = (
+				0A76921C23E91EC000CD4DB6 /* README.md */,
 				0AA4655023A90BF4004A3A79 /* apitest */,
 				0AA4656723A90BF9004A3A79 /* apitestTests */,
 				0AA4654F23A90BF4004A3A79 /* Products */,
