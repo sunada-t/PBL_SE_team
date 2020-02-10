@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import Kanna
 
+
 class testViewController: UIViewController,WKNavigationDelegate{
 
     @IBOutlet weak var rexultCal2: UITextView!
@@ -81,15 +82,22 @@ class testViewController: UIViewController,WKNavigationDelegate{
                             }else if(dayt == 5){
                                 self.friday.text = self.friday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
                             }
-            
+
                     }
                     // self.rexultCal2.text = sizes[i].trimmingCharacters(in: .whitespacesAndNewlines)
                     i=i+1
-                   
+                        
                     }else{
                         break
                     }
+        
+                 
+                    
+
+                    
                                         }
+        Common.setUserDefaults(value: self.rexultCal2, key: "hoge")
+                                        
 }
         
 }
