@@ -10,7 +10,11 @@ import UIKit
 class Gyudon: NSObject {
     var size: String = ""
     var price: String = ""
-}
 func appsif(){
 print("通貨")
 }
+
+
+
+
+                            }
