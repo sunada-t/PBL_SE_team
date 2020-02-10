@@ -39,6 +39,8 @@ class zikanwari1:
     var sizes = [String]()
 
     @IBAction func aaaa(_ sender: UIButton) {
+        let ud = UserDefaults.standard
+       performSegue(withIdentifier: "goToNext", sender: self)
         webvieww.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                                        completionHandler: { (html: Any?, error: Error?) in
                                                         self.nowhtml = html as? String
@@ -49,20 +51,20 @@ class zikanwari1:
                                             sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
                                              
                                         }
-                                    print(sizes)
-print(type(of: sizes))
-                                                        }
+
+                                                            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                                                                if segue.identifier == "goToNext" {
+                                                                    let nextVC = segue.destination as! zikanwari2
+                                                                    ud.set(sizes, forKey: "gett")
+                                                                    nextVC.printData = "sizes"
+                                                                }
+                                                            }
+                                                }
                     }
             )
-        }
-    @IBAction func next(_ sender: Any) {
-           performSegue(withIdentifier: "goToNext", sender: self)
+
+        
         }
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "goToNext" {
-                let nextVC = segue.destination as! zikanwari2
-                nextVC.printData = sizes as! String
-            }
-        }
+
     }
