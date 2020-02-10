@@ -97,7 +97,10 @@ class testViewController: UIViewController,WKNavigationDelegate{
                     
                                         }
         Common.setUserDefaults(value: self.rexultCal2, key: "hoge")
-                                        
+        Common.setUserDefaults(value: self.tuesday, key: "hoge")
+        Common.setUserDefaults(value: self.wednesday, key: "hoge")
+        Common.setUserDefaults(value: self.thursday, key: "hoge")
+        Common.setUserDefaults(value: self.friday, key: "hoge")
 }
         
 }
