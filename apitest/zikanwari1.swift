@@ -10,6 +10,32 @@ import UIKit
 import WebKit
 import Kanna
 
+
+class Common: NSObject {
+    
+    static func getUserDefaults(key: String) -> Any? {
+        
+        let userDefaults = UserDefaults.standard
+        let data = userDefaults.object(forKey: key) as? Data
+        
+        if data != nil {
+            return NSKeyedUnarchiver.unarchiveObject(with: data!)
+        }
+        else {
+            return nil
+        }
+    }
+    
+    static func setUserDefaults(value : Any, key: String) -> Void {
+        
+        let userDefaults = UserDefaults.standard
+        let data : Data = NSKeyedArchiver.archivedData(withRootObject: value)
+        
+        userDefaults.set(data, forKey: key)
+        userDefaults.synchronize()
+    }
+}
+
 class zikanwari1:
       UIViewController
       ,WKNavigationDelegate{
@@ -39,7 +65,7 @@ class zikanwari1:
     var sizes = [String]()
 
     @IBAction func aaaa(_ sender: UIButton) {
-        let ud = UserDefaults.standard
+
        performSegue(withIdentifier: "goToNext", sender: self)
         webvieww.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                                        completionHandler: { (html: Any?, error: Error?) in
@@ -51,11 +77,12 @@ class zikanwari1:
                                             sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
                                              
                                         }
-
+                                //ud.set(sizes, forKey: "gett")
+                                  
+            Common.setUserDefaults(value: sizes, key: "hoge")
                                                             func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                                                                 if segue.identifier == "goToNext" {
                                                                     let nextVC = segue.destination as! zikanwari2
-                                                                    ud.set(sizes, forKey: "gett")
                                                                     nextVC.printData = "sizes"
                                                                 }
                                                             }
