@@ -20,7 +20,15 @@ class zikanwari2: UIViewController {
  
        }
     @IBAction func syutoo(_ sender: UIButton) {
-         let str = Common.getUserDefaults(key: "hoge")
-          print(str)
+        let a = Common.getUserDefaults(key: "getu")
+        let b = Common.getUserDefaults(key: "ka")
+        let c = Common.getUserDefaults(key: "sui")
+        let d = Common.getUserDefaults(key: "moku")
+        let e = Common.getUserDefaults(key: "kin")
+          print(a)
+          print(b)
+          print(c)
+          print(d)
+          print(e)
     }
 }
