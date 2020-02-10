@@ -21,6 +21,7 @@
 		0AA4655E23A90BF8004A3A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4655C23A90BF8004A3A79 /* LaunchScreen.storyboard */; };
 		0AA4656923A90BF9004A3A79 /* apitestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4656823A90BF9004A3A79 /* apitestTests.swift */; };
 		0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */; };
+		4F7690F223EFF38B00B7F89C /* zikanwari2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7690F123EFF38B00B7F89C /* zikanwari2.swift */; };
 		4F8BDDF223DAFCEB00602FBF /* zikanwari1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */; };
 		61C481948CE37328688226EE /* Pods_apitestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38F3211684D56FC23700724 /* Pods_apitestTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		0AA4656A23A90BF9004A3A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaistWebViewController.swift; sourceTree = "<group>"; };
 		0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7690F123EFF38B00B7F89C /* zikanwari2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = zikanwari2.swift; path = "/Users/tsubasa-s/Documents/GitHub/PBL_SE_team/apitest/zikanwari2.swift"; sourceTree = "<absolute>"; };
 		4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari1.swift; sourceTree = "<group>"; };
 		A38F3211684D56FC23700724 /* Pods_apitestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC90387349B020AF774769A9 /* Pods-apitest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apitest.release.xcconfig"; path = "Target Support Files/Pods-apitest/Pods-apitest.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */,
 				0AA4655123A90BF4004A3A79 /* AppDelegate.swift */,
 				0AA4655323A90BF4004A3A79 /* SceneDelegate.swift */,
+				4F7690F123EFF38B00B7F89C /* zikanwari2.swift */,
 				0AA4655523A90BF4004A3A79 /* ViewController.swift */,
 				0AA4655723A90BF4004A3A79 /* Main.storyboard */,
 				0AA4655A23A90BF8004A3A79 /* Assets.xcassets */,
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8BDDF223DAFCEB00602FBF /* zikanwari1.swift in Sources */,
+				4F7690F223EFF38B00B7F89C /* zikanwari2.swift in Sources */,
 				0A90DB3823D84467001E13BA /* BusTimeViewController.swift in Sources */,
 				0A9557E223AE191400C3A245 /* skureipView.swift in Sources */,
 				0A90DB3A23E00028001E13BA /* testViewController.swift in Sources */,
