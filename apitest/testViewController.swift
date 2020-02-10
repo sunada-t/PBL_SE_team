@@ -97,6 +97,12 @@ class testViewController: UIViewController,WKNavigationDelegate{
                     
                                         }
         Common.setUserDefaults(value: self.rexultCal2, key: "hoge")
+                                        Common.setUserDefaults(value: self.rexultCal2.text, key: "getu")
+                                        Common.setUserDefaults(value: self.tuesday.text, key: "ka")
+                                        Common.setUserDefaults(value: self.wednesday.text, key: "sui")
+                                        Common.setUserDefaults(value: self.thursday.text, key: "moku")
+                                        Common.setUserDefaults(value: self.friday.text, key: "kin")
+                                        
                                         
 }
         
