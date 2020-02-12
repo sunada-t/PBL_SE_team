@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollViewDelegate,WKNavigationDelegate{
-    let sitemei = ["from現在地","to目的地"]
+    let sitemei = ["to目的地","from現在地"]
     let siteles = ["https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名",
     "https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名"
         ]
@@ -18,7 +18,6 @@ class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollVi
     var sumurl: String!
     var sites = 0
     var titlett: String!
-    var scopesite:[String?] = []
     var siteme:[String?] = []
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -71,10 +70,14 @@ class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollVi
         searchBar.isHidden = true
         self.navigationItem.title = searchBar.text
         titlett = searchBar.text
-        
+        if(sites == 0){
+            sumurl="https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=" + searchBar.text!
+        }else{
+            sumurl="https://transit.yahoo.co.jp/main/top?from=" + searchBar.text! + "&to=学研北生駒"
+        }
         
             
-            sumurl = scopesite[sites]! + searchBar.text!
+            
             sumurl = sumurl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                         if let url = URL(string: sumurl){
                               self.webview.load(URLRequest(url: url))
