@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollViewDelegate,WKNavigationDelegate{
-    let sitemei = ["to目的地","from現在地"]
+    let sitemei = ["奈良先端to目的地","奈良先端from現在地"]
     let siteles = ["https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名",
     "https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名"
         ]
@@ -73,7 +73,7 @@ class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollVi
         self.navigationItem.title = searchBar.text
         titlett = searchBar.text
         if(sites == 0){
-           sumurl="https://transit.yahoo.co.jp/search/result?flatlon=&fromgid=&from=愛媛&tlatlon=&togid=&to=" + searchBar.text!
+           sumurl="https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=" + searchBar.text!
         }else{
             sumurl="https://transit.yahoo.co.jp/main/top?from=" + searchBar.text! + "&to=学研北生駒"
         }
