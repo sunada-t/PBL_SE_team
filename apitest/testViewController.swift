@@ -12,7 +12,7 @@ import Kanna
 
 
 class testViewController: UIViewController,WKNavigationDelegate{
-
+    @IBOutlet weak var rexultCal: UITextView!
     @IBOutlet weak var rexultCal2: UITextView!
     
     @IBOutlet weak var tuesday: UITextView!
@@ -26,6 +26,9 @@ class testViewController: UIViewController,WKNavigationDelegate{
     
     var nowhtml:String!
     @IBOutlet weak var webview: WKWebView!
+
+    @IBOutlet weak var resultCal: UITextView!
+    @IBOutlet weak var resultCal2: UITextView!
     
 
     
@@ -46,8 +49,8 @@ class testViewController: UIViewController,WKNavigationDelegate{
     }
     
     
-    
-    @IBAction func htmlget(_ sender: Any) {
+    @IBAction func 時間割取得(_ sender: Any) {
+
         webview.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                    completionHandler: { (html: Any?, error: Error?) in
                                     self.nowhtml = html as? String
@@ -72,7 +75,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
                     }
                     else{
                         if(dayt == 1){
-                        self.rexultCal2.text = self.rexultCal2.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
+                self.rexultCal2.text = self.rexultCal2.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
                             }else if(dayt == 2){
                                 self.tuesday.text = self.tuesday.text + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
                             }else if(dayt == 3){
@@ -96,8 +99,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
 
                     
                                         }
-        Common.setUserDefaults(value: self.rexultCal2, key: "hoge")
-                                        Common.setUserDefaults(value: self.rexultCal2.text, key: "getu")
+                        Common.setUserDefaults(value: self.rexultCal2.text, key: "getu")
                                         Common.setUserDefaults(value: self.tuesday.text, key: "ka")
                                         Common.setUserDefaults(value: self.wednesday.text, key: "sui")
                                         Common.setUserDefaults(value: self.thursday.text, key: "moku")
@@ -109,6 +111,56 @@ class testViewController: UIViewController,WKNavigationDelegate{
 }
 )
 }
+    
+    @IBAction func 単位取得(_ sender: Any) {
+        
+        webview.evaluateJavaScript("document.documentElement.outerHTML.toString()",
+                                   completionHandler: { (html: Any?, error: Error?) in
+                                    print(type(of:html))
+                                    self.nowhtml = html as? String
+                                    if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
+                   var sizes = [String]()
+                    for link in doc.xpath("//td[@class='bgGray01']") {
+                        sizes.append(link.text ?? "")
+                    }
+                     var i = 0
+                    var ippan1 = 0
+                    var joron2 = 0
+                    var kiso3 = 0
+                    var senmon4 = 0
+                    var pbl = 0
+                    var senmonkamoku:Int
+            while( i<sizes.count){
+
+                let k = sizes[i].suffix(5)
+                if k.prefix(1) == "1"{
+                    ippan1 += 1
+                }else if k.prefix(1) == "2"{
+                    joron2 += 1
+                }else if k.prefix(1) == "3"{
+                    kiso3 += 1
+                }else if k.prefix(1) == "4"{
+                    senmon4 += 1
+                }else if k.prefix(1) == "5"{
+                    pbl += 1
+                }
+//print("\(sizes[i].suffix(6))--\(sizes[i+1].prefix(5))--\(sizes[i+2].prefix(5))--\(sizes[i+3].prefix(5))")
+                  i = i+4
+                                        }
+senmonkamoku=kiso3+senmon4
+Common.setUserDefaults(value:ippan1, key: "aaa")
+Common.setUserDefaults(value:joron2, key: "bbb")
+Common.setUserDefaults(value:senmonkamoku, key: "ccc")
+Common.setUserDefaults(value:senmon4, key: "ddd")
+Common.setUserDefaults(value:pbl, key: "eee")
+                                        
+                            
+                                        
+        }
+        }
+                                    )
+    }
+    
 }
 
 /*
