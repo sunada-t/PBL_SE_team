@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 class TrainSearchViewController: UIViewController,UISearchBarDelegate,UIScrollViewDelegate,WKNavigationDelegate{
-    let sitemei = ["奈良先端to目的地","奈良先端from現在地"]
+    let sitemei = ["from奈良先端to目的地","from現在地to奈良先端"]
     let siteles = ["https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名",
     "https://transit.yahoo.co.jp/main/top?from=学研北生駒&to=駅名"
         ]
