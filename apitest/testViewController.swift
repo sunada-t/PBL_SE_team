@@ -51,7 +51,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
                                     self.nowhtml = html as? String
                                     if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
                    var sizes = [String]()
-                                       
+                    print(doc)
                     for link in doc.xpath("//td[@class='']") {
                         sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
                         
@@ -109,7 +109,6 @@ class testViewController: UIViewController,WKNavigationDelegate{
         
         webview.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                    completionHandler: { (html: Any?, error: Error?) in
-                                    print(type(of:html))
                                     self.nowhtml = html as? String
                                     if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
                    var sizes = [String]()
