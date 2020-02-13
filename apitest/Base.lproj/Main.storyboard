@@ -317,21 +317,40 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xv-1q-tMb">
-                                <rect key="frame" x="0.0" y="813" width="464" height="44"/>
+                                <rect key="frame" x="0.0" y="813" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="単位取得情報" id="4k4-TY-iHJ">
-                                        <connections>
-                                            <action selector="単位取得:" destination="Z4f-ST-vvT" id="wB4-Vy-kY8"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="時間割取得情報" id="rpa-Fp-8ve">
-                                        <connections>
-                                            <action selector="時間割取得:" destination="Z4f-ST-vvT" id="0a5-h3-jS4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
+                                <items/>
                             </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="96n-c8-Ihn">
+                                <rect key="frame" x="0.0" y="724" width="414" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.062565244734287262" green="0.18780350685119629" blue="0.21843904256820679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAW-sQ-q4h">
+                                <rect key="frame" x="275" y="757" width="85" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="タップ" image="pencil.and.ellipsis.rectangle" catalog="system">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getTimeline:" destination="Z4f-ST-vvT" eventType="touchUpInside" id="II1-GK-Ic6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvc-xL-Ax0">
+                                <rect key="frame" x="72" y="756" width="58" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="単位" image="calendar" catalog="system">
+                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getNowtani:" destination="Z4f-ST-vvT" eventType="touchUpInside" id="E5z-N1-ryv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wuc-F6-19G"/>
@@ -342,6 +361,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nabinabi" destination="96n-c8-Ihn" id="Uk4-SZ-q6d"/>
+                        <outlet property="tanibutton" destination="bvc-xL-Ax0" id="3v6-If-ftT"/>
+                        <outlet property="timelinebutton" destination="bAW-sQ-q4h" id="kHq-2p-ulK"/>
                         <outlet property="webview" destination="xFo-as-65T" id="x7o-Kw-U2o"/>
                     </connections>
                 </viewController>
@@ -428,8 +450,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="greaterthan" catalog="system" width="64" height="54"/>
         <image name="lessthan" catalog="system" width="64" height="54"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
     </resources>
 </document>
