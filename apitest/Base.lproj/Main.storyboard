@@ -338,11 +338,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="テスト" id="3ks-BC-e5P">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="AHH-us-tmy">
-                            <connections>
-                                <action selector="htmlget:" destination="Z4f-ST-vvT" id="jsh-pg-OGE"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="AHH-us-tmy"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
