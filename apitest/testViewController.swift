@@ -156,40 +156,6 @@ Common.setUserDefaults(value:pbl, key: "eee")
     
 }
 
-/*
-                     var i = 0
-                    var ippan1 = 0
-                    var joron2 = 0
-                    var kiso3 = 0
-                    var senmon4 = 0
-                    var pbl = 0
-            while( i<sizes.count){
 
-                let k = sizes[i].suffix(5)
-                if k.prefix(1) == "1"{
-                    ippan1 += 1
-                }else if k.prefix(1) == "2"{
-                    joron2 += 1
-                }else if k.prefix(1) == "3"{
-                    kiso3 += 1
-                }else if k.prefix(1) == "4"{
-                    senmon4 += 1
-                }else if k.prefix(1) == "5"{
-                    pbl += 1
-                }
-                  i = i+4
-                                        }
-        print("単位取得情報ダオ")
-        print(self.webview.url!)
-        self.resultCal.text = "一般 ---->> \(ippan1)/4\n序論 ---->> \(joron2)/3 "
-        self.rexultCal2.text = " 基礎と専門 ->> \(kiso3+senmon4)/12\n pbl ----->> \(pbl)/2"
-                                        
-        }
-        }
-                                    )
-        
-       
-            
-        }*/
                                     
 
