@@ -105,11 +105,6 @@ class testViewController: UIViewController,WKNavigationDelegate{
                             }else{
                                 break
                             }
-                
-                         
-                            
-
-                            
                                                 }
                                                 Common.setUserDefaults(value: self.getu, key: "getu")
                                                 Common.setUserDefaults(value: self.ka, key: "ka")
