@@ -11,12 +11,37 @@ import Kanna
 
 
 
-class zikanwari2: UIViewController {
+class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 31
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
+        
+        return String(row+1)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
+        
+       print(row+1)
+        
+    }
+    
        var printData : String = ""
     
     
+    @IBOutlet weak var dayweek: UISegmentedControl!
     @IBOutlet weak var getu: UITextView!
     
+    @IBOutlet weak var selectday: UIPickerView!
     @IBOutlet weak var ka: UITextView!
     
     @IBOutlet weak var sui: UITextView!
@@ -28,24 +53,27 @@ class zikanwari2: UIViewController {
     override func viewDidLoad() {
         
            super.viewDidLoad()
-        
- 
+        dayweek.setTitle("月", forSegmentAt: 0)
+        dayweek.setTitle("火", forSegmentAt: 1)
+        dayweek.setTitle("水", forSegmentAt: 2)
+        dayweek.setTitle("木", forSegmentAt: 3)
+        dayweek.setTitle("金", forSegmentAt: 4)
+        selectday.delegate = self
+        selectday.dataSource = self
+ dayweek.addTarget(self, action: #selector(segmentChanged(_:)), for: UIControl.Event.valueChanged)
        }
-    @IBAction func syutoo(_ sender: UIButton) {
-        let a = Common.getUserDefaults(key: "getu")
-        let b = Common.getUserDefaults(key: "ka")
-        let c = Common.getUserDefaults(key: "sui")
-        let d = Common.getUserDefaults(key: "moku")
-        let e = Common.getUserDefaults(key: "kin")
-        getu.text = a as! String
-        ka.text = b as! String
-        sui.text = c as! String
-        moku.text = d as! String
-        kin.text = e as! String
-          print(a)
-          print(b)
-          print(c)
-          print(d)
-          print(e)
+
+    @objc func segmentChanged(_ segment:UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            print("月")
+        case 1:
+            print("火")
+        case 2:
+            print("水")
+        default:
+            break
+        }
     }
+    //let a = Common.getUserDefaults(key: "getu")
 }
