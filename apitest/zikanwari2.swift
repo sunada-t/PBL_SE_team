@@ -30,15 +30,13 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
-        
-       print(row+1)
-        
+        dayd = row+1
     }
     
   
     
        var printData : String = ""
-    
+    var dayd = 1
     var monthInf:[[String?]] = []
     @IBOutlet weak var dayweek: UISegmentedControl!
     @IBOutlet weak var getu: UITextView!
@@ -53,31 +51,30 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var kin: UITextView!
     
     
-    func dayShedule(i: Int){
-          var k = 0
-        while(i <= Int(monthInf[k][0]!)!){
-              k=k+1
-          }
-        if(monthInf[k][1]! == "月"){
-              print("祝日")
+    func dayShedule(k: Int){
+        print(monthInf[k][1]!)
+        Common.setUserDefaults(value:monthInf[k], key: "one")
+        Common.setUserDefaults(value:monthInf[k+1], key: "two")
+        Common.setUserDefaults(value:monthInf[k+2], key: "three")
+        Common.setUserDefaults(value:monthInf[k+3], key: "four")
+        Common.setUserDefaults(value:monthInf[k+4], key: "five")
+        print(Common.getUserDefaults(key: "one") as Any)
         
-        }else if(monthInf[k][1]! == "火"){
-                print("祝日")
-          
-        }else if(monthInf[k][1]! == "水"){
-                  print("祝日")
-            
-        } else if(monthInf[k][1]! == "木"){
-            print("祝日")
+        let a = Common.getUserDefaults(key: "one") as? String
       
-        }else if(monthInf[k][1]! == "金"){
-            
-        }
-        Common.setUserDefaults(value:pbl, key: "月")
-        
-        
-          
-      }
+        getu.text = monthInf[k][1]
+        ka.text = monthInf[k][2]
+        sui.text = monthInf[k][1]
+        moku.text = monthInf[k][2]
+        kin.text = monthInf[k][1]
+      
+    }
+    
+    
+    @IBAction func makeWeek(_ sender: Any) {
+        dayShedule(k: dayd)
+    }
+    
     override func viewDidLoad() {
         
         if Common.getUserDefaults(key: "month") != nil{

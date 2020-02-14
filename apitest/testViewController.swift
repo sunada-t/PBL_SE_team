@@ -81,18 +81,19 @@ class testViewController: UIViewController,WKNavigationDelegate{
                             if let days = Int(sizes[i].replacingOccurrences(of: "\t", with: "")){
                                 if(self.dayArray != []){
                                     print(d)
-                                    print(self.dayArray[0])
-                                    d = d+1
+                                    print(Int(self.dayArray[0]!)!)
                                     if(d != Int(self.dayArray[0]!)!){
                                         var s=0
-                                        while((d-Int(self.dayArray[0]!)!)>s){
+                                        let t=d
+                                        while((Int(self.dayArray[0]!)!)-t>=s){
                                             s=s+1
-                                            d=d+1
                                             print("確認")
                                             self.monthArray.append(["\(d)","休み"])
+                                            d=d+1
                                         }
                                     }else{
                                     self.monthArray.append(self.dayArray)
+                                     d = d+1
                                     }
                                 self.dayArray.removeAll()
                                
