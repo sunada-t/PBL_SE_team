@@ -50,6 +50,41 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var kin: UITextView!
     
+    func shokika(){
+        dayweek.setTitle((Common.getUserDefaults(key: "one")as![String])[1], forSegmentAt: 0)
+        dayweek.setTitle((Common.getUserDefaults(key: "two")as![String])[1], forSegmentAt: 1)
+       dayweek.setTitle((Common.getUserDefaults(key: "three")as![String])[1], forSegmentAt: 2)
+        dayweek.setTitle((Common.getUserDefaults(key: "four")as![String])[1], forSegmentAt: 3)
+        dayweek.setTitle((Common.getUserDefaults(key: "five")as![String])[1], forSegmentAt: 4)
+        var q = 2
+       // print()
+        while((Common.getUserDefaults(key: "one")as![String]).count > q){
+       if((Common.getUserDefaults(key: "one")as![String])[q] == "1限目"){
+         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
+        q=q+1
+        }
+       else if((Common.getUserDefaults(key: "one")as![String])[q] == "2限目"){
+         ka.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
+        q=q+1
+        }
+        else if((Common.getUserDefaults(key: "one")as![String])[q] == "3限目"){
+         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
+        q=q+1
+        }
+        else if((Common.getUserDefaults(key: "one")as![String])[q] == "4限目"){
+         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
+        q=q+1
+        }
+        else if((Common.getUserDefaults(key: "one")as![String])[q] == "5限目"){
+         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
+        q=q+1
+        }
+        q=q+1
+        }
+        
+        
+    }
+    
     
     func dayShedule(k: Int){
         print(monthInf[k][1]!)
@@ -61,13 +96,7 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
         print(Common.getUserDefaults(key: "one") as Any)
         
         let a = Common.getUserDefaults(key: "one") as? String
-      
-        getu.text = monthInf[k][1]
-        ka.text = monthInf[k][2]
-        sui.text = monthInf[k][1]
-        moku.text = monthInf[k][2]
-        kin.text = monthInf[k][1]
-      
+        shokika()
     }
     
     
