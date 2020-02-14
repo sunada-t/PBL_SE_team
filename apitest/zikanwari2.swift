@@ -30,7 +30,7 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
-        dayd = row+1
+        dayd = row
     }
     
   
@@ -76,15 +76,15 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "3限目"){
-                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                sui.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "4限目"){
-                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                moku.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "5限目"){
-                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                kin.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
                q=q+1
                }
                q=q+1
