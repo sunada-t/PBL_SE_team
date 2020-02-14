@@ -32,6 +32,14 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
                     inComponent component: Int) {
         dayd = row
     }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+       let label = UILabel()
+        label.textAlignment = .center
+        label.text = String(row)
+        label.textColor = .white
+        return label
+        
+    }
     
   
     
@@ -51,12 +59,15 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var kin: UITextView!
     
     func shokika(){
+       
         dayweek.setTitle((Common.getUserDefaults(key: "one")as![String])[1], forSegmentAt: 0)
         dayweek.setTitle((Common.getUserDefaults(key: "two")as![String])[1], forSegmentAt: 1)
        dayweek.setTitle((Common.getUserDefaults(key: "three")as![String])[1], forSegmentAt: 2)
         dayweek.setTitle((Common.getUserDefaults(key: "four")as![String])[1], forSegmentAt: 3)
         dayweek.setTitle((Common.getUserDefaults(key: "five")as![String])[1], forSegmentAt: 4)
         daysche(kk:"one")
+        
+        
     }
     
     func daysche(kk:String){
@@ -112,6 +123,14 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     override func viewDidLoad() {
+        dayweek.backgroundColor = UIColor.init(red: 16/255, green: 48/255, blue: 56/255, alpha: 1)
+        dayweek.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor:UIColor.white], for: .normal)
+         if #available(iOS 13.0, *) {
+                dayweek.selectedSegmentTintColor = UIColor.black
+             }
+             else {
+                 dayweek.tintColor = UIColor.black
+             }
         
         if Common.getUserDefaults(key: "month") != nil{
              monthInf = Common.getUserDefaults(key: "month")as![[String]]
