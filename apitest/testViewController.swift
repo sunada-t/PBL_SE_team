@@ -22,7 +22,8 @@ class testViewController: UIViewController,WKNavigationDelegate{
     var moku:String = ""
     var kin:String = ""
     var progressView = UIProgressView()
-    
+    var monthArray:[[String?]] = []
+    var dayArray:[String?] = []
     @IBOutlet weak var tanibutton: UIButton!
     @IBOutlet weak var timelinebutton: UIButton!
     override func viewDidLoad() {
@@ -45,7 +46,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "estimatedProgress") {
             progressView.setProgress(Float(webview.estimatedProgress), animated: true)
-            print(webview.url)
+           // print(webview.url)
             if(webview.url! == URL(string:"https://subjregist.naist.jp/registrations/preview_list")){
                 nabinabi.text = "このページから今の単位がわかるよ"
                 tanibutton.isHidden = false
@@ -70,53 +71,49 @@ class testViewController: UIViewController,WKNavigationDelegate{
                                             self.nowhtml = html as? String
                                             if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
                            var sizes = [String]()
-                            print(doc)
                             for link in doc.xpath("//td[@class='']") {
                                 sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
                                 
                             }
                          var i = 0
-                        var dayt = 0
+                        var d = 1
                          while( i<sizes.count){
-                            print(sizes[i])
-                            if(dayt != 6){
                             if let days = Int(sizes[i].replacingOccurrences(of: "\t", with: "")){
-                                if(dayt == 0 && sizes[i+1] == "月"){
-                                dayt = dayt+1
-                                }else if(dayt != 0){
-                                 dayt = dayt+1
+                                if(self.dayArray != []){
+                                    print(d)
+                                    print(Int(self.dayArray[0]!)!)
+                                    if(d != Int(self.dayArray[0]!)!){
+                                        var s=0
+                                        let t=d
+                                        while((Int(self.dayArray[0]!)!)-t>=s){
+                                            s=s+1
+                                            print("確認")
+                                            self.monthArray.append(["\(d)","休み"])
+                                            d=d+1
+                                        }
+                                    }else{
+                                    self.monthArray.append(self.dayArray)
+                                     d = d+1
+                                    }
+                                self.dayArray.removeAll()
+                               
                                 }
+                                self.dayArray.append(sizes[i].replacingOccurrences(of: "\t", with: ""))
                             }
                             else{
-                                if(dayt == 1){
-                                    self.getu = self.getu + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
-                                    }else if(dayt == 2){
-                                    self.ka = self.ka + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
-                                    }else if(dayt == 3){
-                                        self.sui = self.sui + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
-                                    }else if(dayt == 4){
-                                        self.moku = self.moku + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
-                                    }else if(dayt == 5){
-                                        self.kin = self.kin + sizes[i].replacingOccurrences(of: "\t", with: "") + "\n"
-                                    }
-
+                                if(sizes[i].replacingOccurrences(of: "\t", with: "") != ""){
+                                self.dayArray.append(sizes[i].replacingOccurrences(of: "\t", with: ""))
+                                }
                             }
                             i=i+1
-                            }else{
-                                break
-                            }
-                
-                         
-                            
-
-                            
                                                 }
-                                                Common.setUserDefaults(value: self.getu, key: "getu")
-                                                Common.setUserDefaults(value: self.ka, key: "ka")
-                                                Common.setUserDefaults(value: self.sui, key: "sui")
-                                                Common.setUserDefaults(value: self.moku, key: "moku")
-                                                Common.setUserDefaults(value: self.kin, key: "kin")
+                                while(d != 38){
+                                    self.monthArray.append(["\(d)","次は来月"])
+                                    d=d+1
+                                            }
                                                 
+                                                Common.setUserDefaults(value:self.monthArray, key: "month")
+               
                                                 
         }
                 
