@@ -56,32 +56,39 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
        dayweek.setTitle((Common.getUserDefaults(key: "three")as![String])[1], forSegmentAt: 2)
         dayweek.setTitle((Common.getUserDefaults(key: "four")as![String])[1], forSegmentAt: 3)
         dayweek.setTitle((Common.getUserDefaults(key: "five")as![String])[1], forSegmentAt: 4)
+        daysche(kk:"one")
+    }
+    
+    func daysche(kk:String){
+        getu.text = ""
+        ka.text = ""
+        sui.text = ""
+        moku.text = ""
+        kin.text = ""
         var q = 2
-       // print()
-        while((Common.getUserDefaults(key: "one")as![String]).count > q){
-       if((Common.getUserDefaults(key: "one")as![String])[q] == "1限目"){
-         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
-        q=q+1
-        }
-       else if((Common.getUserDefaults(key: "one")as![String])[q] == "2限目"){
-         ka.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
-        q=q+1
-        }
-        else if((Common.getUserDefaults(key: "one")as![String])[q] == "3限目"){
-         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
-        q=q+1
-        }
-        else if((Common.getUserDefaults(key: "one")as![String])[q] == "4限目"){
-         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
-        q=q+1
-        }
-        else if((Common.getUserDefaults(key: "one")as![String])[q] == "5限目"){
-         getu.text = (Common.getUserDefaults(key: "one")as![String])[q+1]
-        q=q+1
-        }
-        q=q+1
-        }
-        
+        while((Common.getUserDefaults(key: kk)as![String]).count > q){
+              if((Common.getUserDefaults(key: kk)as![String])[q] == "1限目"){
+                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+               q=q+1
+               }
+              else if((Common.getUserDefaults(key: kk)as![String])[q] == "2限目"){
+                ka.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+               q=q+1
+               }
+               else if((Common.getUserDefaults(key: kk)as![String])[q] == "3限目"){
+                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+               q=q+1
+               }
+               else if((Common.getUserDefaults(key: kk)as![String])[q] == "4限目"){
+                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+               q=q+1
+               }
+               else if((Common.getUserDefaults(key: kk)as![String])[q] == "5限目"){
+                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+               q=q+1
+               }
+               q=q+1
+               }
         
     }
     
@@ -126,11 +133,20 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     @objc func segmentChanged(_ segment:UISegmentedControl) {
         switch segment.selectedSegmentIndex {
         case 0:
+            daysche(kk:"one")
             print("月")
         case 1:
+            daysche(kk:"two")
             print("火")
         case 2:
+            daysche(kk:"three")
             print("水")
+        case 3:
+        daysche(kk:"four")
+        print("水")
+        case 4:
+        daysche(kk:"five")
+        print("水")
         default:
             break
         }
