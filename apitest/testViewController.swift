@@ -46,7 +46,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "estimatedProgress") {
             progressView.setProgress(Float(webview.estimatedProgress), animated: true)
-            print(webview.url)
+           // print(webview.url)
             if(webview.url! == URL(string:"https://subjregist.naist.jp/registrations/preview_list")){
                 nabinabi.text = "このページから今の単位がわかるよ"
                 tanibutton.isHidden = false
@@ -71,19 +71,31 @@ class testViewController: UIViewController,WKNavigationDelegate{
                                             self.nowhtml = html as? String
                                             if let doc = try? HTML(html: self.nowhtml, encoding: .utf8){
                            var sizes = [String]()
-                            print(doc)
                             for link in doc.xpath("//td[@class='']") {
                                 sizes.append(link.text!.replacingOccurrences(of: "\n", with: ""))
                                 
                             }
                          var i = 0
-                        
+                        var d = 1
                          while( i<sizes.count){
-                            print(sizes[i])
                             if let days = Int(sizes[i].replacingOccurrences(of: "\t", with: "")){
                                 if(self.dayArray != []){
+                                    print(d)
+                                    print(self.dayArray[0])
+                                    d = d+1
+                                    if(d != Int(self.dayArray[0]!)!){
+                                        var s=0
+                                        while((d-Int(self.dayArray[0]!)!)>s){
+                                            s=s+1
+                                            d=d+1
+                                            print("確認")
+                                            self.monthArray.append(["\(d)","休み"])
+                                        }
+                                    }else{
                                     self.monthArray.append(self.dayArray)
+                                    }
                                 self.dayArray.removeAll()
+                               
                                 }
                                 self.dayArray.append(sizes[i].replacingOccurrences(of: "\t", with: ""))
                             }
@@ -94,18 +106,8 @@ class testViewController: UIViewController,WKNavigationDelegate{
                             }
                             i=i+1
                                                 }
-                                                
-                                                for i in 0..<self.monthArray.count{
-                                                print(self.monthArray[i])
-                                                
-                                                }
-                                                
-                                                Common.setUserDefaults(value: self.getu, key: "getu")
-                                                Common.setUserDefaults(value: self.ka, key: "ka")
-                                                Common.setUserDefaults(value: self.sui, key: "sui")
-                                                Common.setUserDefaults(value: self.moku, key: "moku")
-                                                Common.setUserDefaults(value: self.kin, key: "kin")
-                                                
+                                                Common.setUserDefaults(value:self.monthArray, key: "month")
+               
                                                 
         }
                 

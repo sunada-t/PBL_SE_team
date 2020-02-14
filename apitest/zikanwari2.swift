@@ -35,9 +35,11 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
         
     }
     
+  
+    
        var printData : String = ""
     
-    
+    var monthInf:[[String?]] = []
     @IBOutlet weak var dayweek: UISegmentedControl!
     @IBOutlet weak var getu: UITextView!
     
@@ -50,7 +52,39 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var kin: UITextView!
     
+    
+    func dayShedule(i: Int){
+          var k = 0
+        while(i <= Int(monthInf[k][0]!)!){
+              k=k+1
+          }
+        if(monthInf[k][1]! == "月"){
+              print("祝日")
+        
+        }else if(monthInf[k][1]! == "火"){
+                print("祝日")
+          
+        }else if(monthInf[k][1]! == "水"){
+                  print("祝日")
+            
+        } else if(monthInf[k][1]! == "木"){
+            print("祝日")
+      
+        }else if(monthInf[k][1]! == "金"){
+            
+        }
+        Common.setUserDefaults(value:pbl, key: "月")
+        
+        
+          
+      }
     override func viewDidLoad() {
+        
+        if Common.getUserDefaults(key: "month") != nil{
+             monthInf = Common.getUserDefaults(key: "month")as![[String]]
+             print(monthInf)
+        }
+       
         
            super.viewDidLoad()
         dayweek.setTitle("月", forSegmentAt: 0)
