@@ -107,6 +107,11 @@ class testViewController: UIViewController,WKNavigationDelegate{
                             }
                             i=i+1
                                                 }
+                                while(d != 38){
+                                    self.monthArray.append(["\(d)","次は来月"])
+                                    d=d+1
+                                            }
+                                                
                                                 Common.setUserDefaults(value:self.monthArray, key: "month")
                
                                                 
