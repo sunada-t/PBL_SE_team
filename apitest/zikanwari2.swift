@@ -70,6 +70,14 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
         
     }
     
+    func mojihenkan(moji:String)->String{
+        var k:String = ""
+        k = moji.replacingOccurrences(of: "[", with: "\n")
+        k = k.replacingOccurrences(of: "]　", with: "\n")
+        k = k.replacingOccurrences(of: "＜", with: "\n<")
+        return k
+    }
+    
     func daysche(kk:String){
         getu.text = ""
         ka.text = ""
@@ -79,23 +87,23 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
         var q = 2
         while((Common.getUserDefaults(key: kk)as![String]).count > q){
               if((Common.getUserDefaults(key: kk)as![String])[q] == "1限目"){
-                getu.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                getu.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
                q=q+1
                }
               else if((Common.getUserDefaults(key: kk)as![String])[q] == "2限目"){
-                ka.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                ka.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "3限目"){
-                sui.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                sui.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "4限目"){
-                moku.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                moku.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
                q=q+1
                }
                else if((Common.getUserDefaults(key: kk)as![String])[q] == "5限目"){
-                kin.text = (Common.getUserDefaults(key: kk)as![String])[q+1]
+                kin.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
                q=q+1
                }
                q=q+1
