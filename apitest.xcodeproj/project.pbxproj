@@ -22,6 +22,7 @@
 		0AA4655E23A90BF8004A3A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4655C23A90BF8004A3A79 /* LaunchScreen.storyboard */; };
 		0AA4656923A90BF9004A3A79 /* apitestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4656823A90BF9004A3A79 /* apitestTests.swift */; };
 		0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */; };
+		0AFFA3A923F6EEA90087EA73 /* 9550.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFA3A823F6EEA80087EA73 /* 9550.png */; };
 		4F7690F223EFF38B00B7F89C /* zikanwari2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7690F123EFF38B00B7F89C /* zikanwari2.swift */; };
 		4F8BDDF223DAFCEB00602FBF /* zikanwari1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */; };
 		61C481948CE37328688226EE /* Pods_apitestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38F3211684D56FC23700724 /* Pods_apitestTests.framework */; };
@@ -58,6 +59,7 @@
 		0AA4656823A90BF9004A3A79 /* apitestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apitestTests.swift; sourceTree = "<group>"; };
 		0AA4656A23A90BF9004A3A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaistWebViewController.swift; sourceTree = "<group>"; };
+		0AFFA3A823F6EEA80087EA73 /* 9550.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9550.png; sourceTree = "<group>"; };
 		0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7690F123EFF38B00B7F89C /* zikanwari2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari2.swift; sourceTree = "<group>"; };
 		4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari1.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				4F7690F123EFF38B00B7F89C /* zikanwari2.swift */,
 				0AA4655523A90BF4004A3A79 /* ViewController.swift */,
 				0AA4655723A90BF4004A3A79 /* Main.storyboard */,
+				0AFFA3A823F6EEA80087EA73 /* 9550.png */,
 				0AA4655A23A90BF8004A3A79 /* Assets.xcassets */,
 				0AA4655C23A90BF8004A3A79 /* LaunchScreen.storyboard */,
 				0AA4655F23A90BF8004A3A79 /* Info.plist */,
@@ -248,6 +251,7 @@
 			files = (
 				0AA4655E23A90BF8004A3A79 /* LaunchScreen.storyboard in Resources */,
 				0AA4655B23A90BF8004A3A79 /* Assets.xcassets in Resources */,
+				0AFFA3A923F6EEA90087EA73 /* 9550.png in Resources */,
 				0AA4655923A90BF4004A3A79 /* Main.storyboard in Resources */,
 				0A9557E423AE1AC300C3A245 /* dog2.png in Resources */,
 			);
