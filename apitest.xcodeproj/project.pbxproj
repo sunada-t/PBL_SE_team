@@ -22,6 +22,8 @@
 		0AA4655E23A90BF8004A3A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4655C23A90BF8004A3A79 /* LaunchScreen.storyboard */; };
 		0AA4656923A90BF9004A3A79 /* apitestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4656823A90BF9004A3A79 /* apitestTests.swift */; };
 		0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */; };
+		0AFC90A823F7CD770084E7B9 /* homecomment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFC90A723F7CD770084E7B9 /* homecomment.png */; };
+		0AFC90AA23F7CEB80084E7B9 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC90A923F7CEB80084E7B9 /* homeViewController.swift */; };
 		0AFFA3A923F6EEA90087EA73 /* 9550.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFA3A823F6EEA80087EA73 /* 9550.png */; };
 		4F7690F223EFF38B00B7F89C /* zikanwari2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7690F123EFF38B00B7F89C /* zikanwari2.swift */; };
 		4F8BDDF223DAFCEB00602FBF /* zikanwari1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BDDF123DAFCEB00602FBF /* zikanwari1.swift */; };
@@ -59,6 +61,8 @@
 		0AA4656823A90BF9004A3A79 /* apitestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apitestTests.swift; sourceTree = "<group>"; };
 		0AA4656A23A90BF9004A3A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AE4002123D6BEE200A08C86 /* NaistWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaistWebViewController.swift; sourceTree = "<group>"; };
+		0AFC90A723F7CD770084E7B9 /* homecomment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homecomment.png; path = ../../../Desktop/homecomment.png; sourceTree = "<group>"; };
+		0AFC90A923F7CEB80084E7B9 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		0AFFA3A823F6EEA80087EA73 /* 9550.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9550.png; sourceTree = "<group>"; };
 		0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7690F123EFF38B00B7F89C /* zikanwari2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikanwari2.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				0AA4655323A90BF4004A3A79 /* SceneDelegate.swift */,
 				4F7690F123EFF38B00B7F89C /* zikanwari2.swift */,
 				0AA4655523A90BF4004A3A79 /* ViewController.swift */,
+				0AFC90A723F7CD770084E7B9 /* homecomment.png */,
 				0AA4655723A90BF4004A3A79 /* Main.storyboard */,
 				0AFFA3A823F6EEA80087EA73 /* 9550.png */,
 				0AA4655A23A90BF8004A3A79 /* Assets.xcassets */,
@@ -131,6 +136,7 @@
 				0A90DB3723D84467001E13BA /* BusTimeViewController.swift */,
 				0A90DB3923E00028001E13BA /* testViewController.swift */,
 				0A9D843723F422CD000697BB /* TrainSearchViewController.swift */,
+				0AFC90A923F7CEB80084E7B9 /* homeViewController.swift */,
 			);
 			path = apitest;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 				0AA4655B23A90BF8004A3A79 /* Assets.xcassets in Resources */,
 				0AFFA3A923F6EEA90087EA73 /* 9550.png in Resources */,
 				0AA4655923A90BF4004A3A79 /* Main.storyboard in Resources */,
+				0AFC90A823F7CD770084E7B9 /* homecomment.png in Resources */,
 				0A9557E423AE1AC300C3A245 /* dog2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +349,7 @@
 				0A90DB3A23E00028001E13BA /* testViewController.swift in Sources */,
 				0AE4002223D6BEE200A08C86 /* NaistWebViewController.swift in Sources */,
 				0A9D843823F422CD000697BB /* TrainSearchViewController.swift in Sources */,
+				0AFC90AA23F7CEB80084E7B9 /* homeViewController.swift in Sources */,
 				0A9C101923AD1C210095E3B2 /* Gyudon.swift in Sources */,
 				0AA4655623A90BF4004A3A79 /* ViewController.swift in Sources */,
 				0AA4655223A90BF4004A3A79 /* AppDelegate.swift in Sources */,
