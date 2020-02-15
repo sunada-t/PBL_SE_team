@@ -35,7 +35,7 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
        let label = UILabel()
         label.textAlignment = .center
-        label.text = String(row)
+        label.text = String(row+1)
         label.textColor = .white
         return label
         
