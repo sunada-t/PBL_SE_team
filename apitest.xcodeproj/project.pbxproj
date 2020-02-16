@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09804D3BF594ACC23DB6CD58 /* Pods_apitest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */; };
+		0A1DF49523F96ECB0063CA07 /* Pods_apitest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */; };
+		0A1DF49623F96ECB0063CA07 /* Pods_apitest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A90DB3823D84467001E13BA /* BusTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90DB3723D84467001E13BA /* BusTimeViewController.swift */; };
 		0A90DB3A23E00028001E13BA /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90DB3923E00028001E13BA /* testViewController.swift */; };
 		0A9557E223AE191400C3A245 /* skureipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9557E123AE191400C3A245 /* skureipView.swift */; };
@@ -40,7 +41,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0A1DF49723F96ECB0063CA07 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A1DF49623F96ECB0063CA07 /* Pods_apitest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0A1DF48923F96E870063CA07 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1DF48D23F96EB20063CA07 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1DF49123F96EB60063CA07 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A76921C23E91EC000CD4DB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A90DB3723D84467001E13BA /* BusTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeViewController.swift; sourceTree = "<group>"; };
 		0A90DB3923E00028001E13BA /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09804D3BF594ACC23DB6CD58 /* Pods_apitest.framework in Frameworks */,
+				0A1DF49523F96ECB0063CA07 /* Pods_apitest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +183,10 @@
 		FBC320466C11C41C5AC48D60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */,
+				0A1DF49123F96EB60063CA07 /* Kanna.framework */,
+				0A1DF48D23F96EB20063CA07 /* Alamofire.framework */,
+				0A1DF48923F96E870063CA07 /* Alamofire.framework */,
 				0A9C100D23AD16F10095E3B2 /* Kanna.framework */,
 				0C784202CD2D6E8BA080CB2D /* Pods_apitest.framework */,
 				A38F3211684D56FC23700724 /* Pods_apitestTests.framework */,
@@ -183,6 +206,7 @@
 				0AA4654B23A90BF4004A3A79 /* Frameworks */,
 				0AA4654C23A90BF4004A3A79 /* Resources */,
 				39B5A9A960367133B92E9F78 /* [CP] Embed Pods Frameworks */,
+				0A1DF49723F96ECB0063CA07 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,7 +472,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

@@ -4,10 +4,10 @@
 target 'apitest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for apitest
-pod "Alamofire"
-pod "Kanna"
+pod 'Alamofire', '~> 4.0'
+pod "Kanna", '~> 5.0.0'
+pod "MBCircularProgressBar"
   target 'apitestTests' do
     inherit! :search_paths
     # Pods for testing

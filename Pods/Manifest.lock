@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
   - Kanna (5.0.0)
+  - MBCircularProgressBar (0.3.5)
 
 DEPENDENCIES:
-  - Alamofire
-  - Kanna
+  - Alamofire (~> 4.0)
+  - Kanna (~> 5.0.0)
+  - MBCircularProgressBar
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kanna
+    - MBCircularProgressBar
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
 
-PODFILE CHECKSUM: b4adc80aaa145c35e8697738020572d8ab63b07b
+PODFILE CHECKSUM: 857cf1786f88d353f7995a8534e70cf5e9bbcafe
 
 COCOAPODS: 1.8.4
