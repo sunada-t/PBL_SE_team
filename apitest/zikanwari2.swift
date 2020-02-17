@@ -85,6 +85,7 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
         moku.text = ""
         kin.text = ""
         var q = 2
+        if(Common.getUserDefaults(key: kk) != nil){
         while((Common.getUserDefaults(key: kk)as![String]).count > q){
               if((Common.getUserDefaults(key: kk)as![String])[q] == "1限目"){
                 getu.text = mojihenkan(moji: (Common.getUserDefaults(key: kk)as![String])[q+1])
@@ -108,7 +109,7 @@ class zikanwari2: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource{
                }
                q=q+1
                }
-        
+        }
     }
     
     
