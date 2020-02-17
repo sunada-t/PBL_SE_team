@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A1DF49523F96ECB0063CA07 /* Pods_apitest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */; };
 		0A1DF49623F96ECB0063CA07 /* Pods_apitest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A1DF49923FA5F620063CA07 /* nasura_ms12.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DF49823FA5F620063CA07 /* nasura_ms12.png */; };
 		0A90DB3823D84467001E13BA /* BusTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90DB3723D84467001E13BA /* BusTimeViewController.swift */; };
 		0A90DB3A23E00028001E13BA /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90DB3923E00028001E13BA /* testViewController.swift */; };
 		0A9557E223AE191400C3A245 /* skureipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9557E123AE191400C3A245 /* skureipView.swift */; };
@@ -60,6 +61,7 @@
 		0A1DF48D23F96EB20063CA07 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1DF49123F96EB60063CA07 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1DF49423F96ECB0063CA07 /* Pods_apitest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_apitest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1DF49823FA5F620063CA07 /* nasura_ms12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nasura_ms12.png; sourceTree = "<group>"; };
 		0A76921C23E91EC000CD4DB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A90DB3723D84467001E13BA /* BusTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeViewController.swift; sourceTree = "<group>"; };
 		0A90DB3923E00028001E13BA /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0AFC90AD23F82BE50084E7B9 /* homecomment.png */,
 				0AA4655523A90BF4004A3A79 /* ViewController.swift */,
 				0AA4655723A90BF4004A3A79 /* Main.storyboard */,
+				0A1DF49823FA5F620063CA07 /* nasura_ms12.png */,
 				0AFFA3A823F6EEA80087EA73 /* 9550.png */,
 				0AA4655A23A90BF8004A3A79 /* Assets.xcassets */,
 				0AA4655C23A90BF8004A3A79 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1DF49923FA5F620063CA07 /* nasura_ms12.png in Resources */,
 				0AA4655E23A90BF8004A3A79 /* LaunchScreen.storyboard in Resources */,
 				0AA4655B23A90BF8004A3A79 /* Assets.xcassets in Resources */,
 				0AFFA3A923F6EEA90087EA73 /* 9550.png in Resources */,

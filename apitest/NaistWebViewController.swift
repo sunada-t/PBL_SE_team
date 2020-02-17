@@ -30,7 +30,7 @@ class NaistWebViewController: UIViewController{
     var joron2 = 0.0
     var senmonkamoku = 0.0
     var pbl = 0.0
-    var remain = 0.0
+    
     override func viewDidLoad() {
          super.viewDidLoad()
         if(Common.getUserDefaults(key: "aaa") != nil){
@@ -44,7 +44,7 @@ class NaistWebViewController: UIViewController{
           }
     
     func caluunit(){
-        
+            var remain = 0.0
              joron.progress = Float(joron2/3)
              ippan.progress = Float(ippan1/4)
              sennmonkuso.progress = Float(senmonkamoku/12)
@@ -91,13 +91,13 @@ class NaistWebViewController: UIViewController{
     
 
     @IBAction func ippb(_ sender: Any) {
-        ippan1 = ippan1 - 2
+        ippan1 = ippan1 - 1
                caluunit()
     }
     
     
     @IBAction func semonb(_ sender: Any) {
-       senmonkamoku = senmonkamoku - 2
+       senmonkamoku = senmonkamoku - 1
                caluunit()
     }
     

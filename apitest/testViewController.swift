@@ -58,6 +58,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
             }else if(webview.url! == URL(string:"https://subjregist.naist.jp/")){
                 nabinabi.text = "loginしてください"
             }else{
+                self.nabinabi.text = "※月間時間割と単位登録情報で有効です"
                 timelinebutton.isHidden = true
                 tanibutton.isHidden = true
             }
@@ -119,6 +120,7 @@ class testViewController: UIViewController,WKNavigationDelegate{
                 
         }
         )
+        self.nabinabi.text = "取得しました．ホーム画面に戻って確認してみよう"
     }
     
 
@@ -161,12 +163,13 @@ class testViewController: UIViewController,WKNavigationDelegate{
         Common.setUserDefaults(value:senmonkamoku, key: "ccc")
         Common.setUserDefaults(value:senmon4, key: "ddd")
         Common.setUserDefaults(value:pbl, key: "eee")
-                                                
+      
                                     
                                                 
                 }
                 }
                                             )
+          self.nabinabi.text = "保存しました．月間時間割も保存できますよ"
     }
     
  
